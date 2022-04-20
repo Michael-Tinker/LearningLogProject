@@ -1,0 +1,63 @@
+py -3.7 -m venv .venv
+.\.venv\Scripts\activate
+pip install -r requirements.txt
+make sure its on 3.7.9 otherwise it breaks
+
+DJANGO
+djang-admin startproject learning_log .
+ the . with the space tells it to do it in the root folder
+creates the skeleton of the project
+
+SQL Lite database creation (one file, uses OOP, doesn't use sql (nosql))
+py manage.py migrate
+first run it creates the db (need a sqllite viewer to view the data)
+migrates any changes to the models.py file so that it can ....????
+
+py manage.py runserver
+done quite often, but done in the debugger
+when you get the "starting development server" message
+there's no errors and you can follow the link to access the dev site
+
+in terminal ctrl + c it stops the server and gives your cursor back
+
+
+select the manage.py file, click run and debug icon on the far left
+ select the json option and then from the palet select django
+then to debug it will run and save all at the same time when you press play on the debug panel
+the refresh button will save and update the changes for the page
+
+create an app:
+py manage.py startapp MainApp
+
+learning_log is our project folder
+MainApp is our ? folder
+All the tables we're making will be in mainapp > models.py as class definition files
+
+Creating two tables
+one a topic table, and one an entry table
+
+you need to add the "MainApp" to the lsit of installed apps in line 30 something of settings.py in learning_log
+
+
+
+
+py manage.py makemigrations
+Under the mainapp folder in the migrations folder it created the 001_initial.py
+it created the file to know what to change on the db
+
+py manage.py migrate
+
+
+
+
+
+
+user stuff
+py manage.py createsuperuser
+admin
+you can skip the email address
+password: SuperUser
+
+
+admin portal has the users and groups but we want to access the models and tables we create so we are going to register the tables with the admin side so we can access them
+admin.py file

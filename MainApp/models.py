@@ -9,7 +9,7 @@ class Topic(models.Model):
 
     def __str__(self):
         #with a str method we can define what to return when someone calls a print statement
-        return self.text
+        return self.text #+ '-' + str(self.date_added)
             #text is user defined as an attribute (just a word we came up with)
         #if we print(Topic) it would print the text of that topic
 
@@ -17,6 +17,9 @@ class Entry(models.Model):
     topic = models.ForeignKey(Topic, on_delete=models.CASCADE)
     text = models.TextField()
     date_added = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        verbose_name_plural =  'entries'
 
     def __str__(self):
         #with a str method we can define what to return when someone calls a print statement

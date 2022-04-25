@@ -61,3 +61,41 @@ password: SuperUser
 
 admin portal has the users and groups but we want to access the models and tables we create so we are going to register the tables with the admin side so we can access them
 admin.py file
+
+
+
+https://sqlitebrowser.org/
+https://download.sqlitebrowser.org/DB.Browser.for.SQLite-3.12.2-win64.msi
+
+
+click the two checkboxes on the left on some screen
+
+open db.sqlite3 in the python project file
+browse data
+change view from entry to topic
+
+
+
+
+look at another way to interact with the database
+
+
+
+making pages: the learning log home page
+- making web pages with django consists of three stages:
+    defining urls
+        writing views
+writing templates
+
+- can be done in any order but a preferred method is to define URL, write a view and then a templates
+
+- each URL maps toa  view
+
+- the view function retrieves and processes the data needed for that page.
+
+- the view function often renders teh page using a template, which contains the overall structure of the page
+
+
+template tags are usually {%    %}
+template variabels are usually {{   }}
+

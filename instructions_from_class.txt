@@ -99,3 +99,6 @@ writing templates
 template tags are usually {%    %}
 template variabels are usually {{   }}
 
+
+sign on stuffs
+py manage.py startapp users

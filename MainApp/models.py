@@ -1,11 +1,12 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 # Create your models here.
 class Topic(models.Model):
     text = models.CharField(max_length=200)
     date_added = models.DateTimeField(auto_now_add=True)
     #all user defined topic, text, and date_added
-
+    owner = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self):
         #with a str method we can define what to return when someone calls a print statement
